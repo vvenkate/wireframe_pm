@@ -114,4 +114,10 @@
         margin-left: auto;
     }
 }
+.div_disable{
+	display:none;
+}
+.div_enable{
+	display:block;
+}
 

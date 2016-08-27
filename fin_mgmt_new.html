@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Virtual Desk - Finance Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<script src="js/jquery.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+  
+<!-- Mainly scripts -->
+<script src="js/jquery.metisMenu.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script>
+<!-- Custom and plugin javascript -->
+<link href="css/custom.css" rel="stylesheet">
+<script src="js/custom.js"></script>
+<script src="js/unit_mgmt.js"></script>
+<script src="js/screenfull.js"></script>
+		<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}	
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});		
+		});
+		</script>
+
+
+
+</head>
+<body>
+<div id="wrapper">
+       <!----->
+        <nav class="navbar-default navbar-static-top" role="navigation">
+             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <h1> <a class="navbar-brand" href="index.html">Virtual Desk</a></h1>         
+			   </div>
+			 <div class=" border-bottom">
+        	<div class="full-left">
+        	  <section class="full-top">
+				<button id="toggle"><i class="fa fa-arrows-alt"></i></button>	
+			</section>
+			<form class=" navbar-left-right">
+              <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
+              <input type="submit" value="" class="fa fa-search">
+            </form>
+            <div class="clearfix"> </div>
+           </div>
+     
+       
+            <!-- Brand and toggle get grouped for better mobile display -->
+		 
+		   <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="drop-men" >
+		        <ul class=" nav_1">
+					<li class="dropdown">
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Admin<i class="caret"></i></span><img src="images/link.png"></a>
+		              <ul class="dropdown-menu " role="menu">
+		                <li><a href="profile.html"><i class="fa fa-user"></i>Edit Profile</a></li>
+		              </ul>
+		            </li>
+		           
+		        </ul>
+		     </div><!-- /.navbar-collapse -->
+			<div class="clearfix">
+       
+     </div>
+	  
+		    <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+				
+                    <li>
+                        <a href="staff_mgmt_index.html" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon "></i><span class="nav-label">Staff Management</span> </a>
+                    </li>
+                    <li>
+                        <a href="fin_mgmt_index.html" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon "></i><span class="nav-label">Finance Management</span> </a>
+                    </li>
+                    <li>
+                        <a href="unit_mgmt_index.html" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon "></i><span class="nav-label">Unit Management</span> </a>
+                    </li>
+                    <li>
+                        <a href="maint_mgmt_index.html" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon "></i><span class="nav-label">Maintenance Ticket</span> </a>
+                    </li>                   
+                    <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-list nav_icon"></i> <span class="nav-label">Reports</span><span class="fa arrow"></span></a>
+                    </li>
+                   
+                    <li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">User Management</span><span class="fa arrow"></span></a>
+                    </li>
+                </ul>
+            </div>
+			</div>
+        </nav>
+		 <div id="page-wrapper" class="gray-bg dashbard-1">
+       <div class="content-main">
+ 
+ 	<!--banner-->	
+		     <div class="banner">
+		    	<h2>
+				<a href="index.html">Home</a>
+				<i class="fa fa-angle-right"></i>
+				<a href="unit_mgmt_index.html"><span>Finance Management</span></a>
+				</h2>
+		    </div>
+		<!--//banner-->
+ 	 <!--faq-->
+ 	<div class="blank">
+		<div class="blank-page">
+			<div class="grid_3 grid_5">
+                 <!--h3 class="head-top">Tabs</h3-->
+                 <div class="but_list">
+                   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                      <li role="presentation"><a href="unit_mgmt_index.html" id="home-tab" role="tab">Home</a></li>
+                      <li role="presentation" class="active"><a href="#" role="tab" id="profile-tab">New Expenses</a></li>
+                      <li role="presentation"><a href="#" role="tab" id="profile-tab">Expenses</a></li>
+                    </ul>
+                <form action="fin_mgmt_index.html" method="post" name="prop_main">
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                  	<h2 class="h2.-bootstrap-heading group-mail">New Expenses</h2>
+                    
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="expense_name">Expense Name</label>
+                        <input id="expense_name" name="expense_name" class="form-control" required type="text" placeholder="Expense name">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="exp_type">Expense Type</label>
+                        <select class="form-control1" id="exp_type" name="exp_type">
+                                  <option value="Maintenance">Maintenance</option>
+                                  <option value="Stationery">Office Stationery</option>
+                                  <option value="Others">Others</option>
+                        </select>
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="expense_amt">Amount (AED)</label>
+                        <input id="expense_amt" name="expense_amt" class="form-control" required type="text" placeholder="XX">
+                        </div>
+                    </div>
+                                        
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="exp_date">Expense Date</label>
+                        <div class="input-group">
+                        	<input id="exp_date" name="exp_date" class="form-control" type="text" required placeholder="dd-mm-yyyy"><span class="input-group-addon"><a href="#"><img width="21" height="20" alt="DT" src="images/date.png"></a></span>
+                        </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        &nbsp;
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        &nbsp;
+                        </div>
+                    </div>
+                    
+                    <div id="expdata">
+                    <div class="row">
+                    	<div class="col-xs-6 col-md-4 group-mail">
+                        <label for="prop_type">Property Type</label>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Building"  /><label>Building/FLAT</label></div>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Villa" checked/><label>Villa</label></div>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Warehouse" /><label> Warehouse</label></div>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Shop" /><label> Shops</label></div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <!-- villa details -->
+                    <div id="villa" class="div_enable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="villa_no">Villa No</label>
+                            <select class="form-control1" id="villa_no" name="villa_no">
+                              <option value="">-- select one --</option>
+                              <option value="Villa A101">Villa A101</option>
+                              <option value="Villa A102">Villa A102</option>
+                              <option value="Villa B101">Villa B101</option>
+                              <option value="Villa B111">Villa B111</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="villa_no">Villa Name</label>
+                            <input id="villa_no" name="villa_no" class="form-control" disabled type="text" placeholder="Automatic Populate">
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flat/Building details -->
+                    <div id="flat" class="div_disable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="flat_name">Building Name</label>
+                            <select class="form-control1" id="flat_name" name="flat_name">
+                              <option value="">-- select one --</option>
+                              <option value="building1">Building 1</option>
+                              <option value="building2">Building 2</option>
+                              <option value="building3">Building 3</option>
+                              <option value="building4">Building 4</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="flat_name">Flat No</label>
+                            <select class="form-control1" id="flat_no" name="flat_no">
+                            	<option value="">-- select one --</option>
+                                <option value="Flat 101 ">Flat 101 </option>
+                              <option value="Flat 102">Flat 102</option>
+                              <option value="building3">Flat 511</option>
+                              <option value="building4">Flat 345</option>
+                            </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Warehouse details -->
+                    <div id="warehouse" class="div_disable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="wh_no">Warehouse No</label>
+                            <select class="form-control1" id="wh_no" name="wh_no">
+                              <option value="">-- select one --</option>
+                              <option value="building1">Warehouse 1</option>
+                              <option value="building2">Warehouse 2</option>
+                              <option value="building3">Warehouse 3</option>
+                              <option value="building4">Warehouse 4</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="warehouse_name">Warehouse Name</label>
+                            <input id="warehouse_name" name="warehouse_name" class="form-control" type="text" disabled placeholder="Autofill">
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Shop details -->
+                    <div id="shop" class="div_disable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="shopi_no">Shop No</label>
+                            <select class="form-control1" id="shopi_no" name="shopi_no">
+                              <option value="">-- select one --</option>
+                              <option value="building1">Shop 1</option>
+                              <option value="building2">Shop 2</option>
+                              <option value="building3">Shop 3</option>
+                              <option value="building4">Shop 4</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="shopi_name">Shop Name</label>
+                            <input id="shopi_name" name="shopi_name" class="form-control" type="text" disabled placeholder="Autofill">
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                        
+                    <!-- footer-->
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button class="btn-primary btn">Save</button>
+                                <button class="btn-inverse btn" type="reset">Reset</button>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                </form>
+           </div>
+           </div>
+          </div>
+	    </div>
+	</div>
+	
+	<!--//faq-->
+		<!---->
+<div class="copy">
+            <p> &copy; 2016 Virtual Desk. All Rights Reserved | Developed by <a href="http://fomaxtech.com/" target="_blank">Avohi</a> </p>	    </div>
+		</div>
+		</div>
+		<div class="clearfix"> </div>
+       </div>
+     
+<!---->
+<!--scrolling js-->
+	<script src="js/jquery.nicescroll.js"></script>
+	<script src="js/scripts.js"></script>
+	<!--//scrolling js-->
+</body>
+</html>
+

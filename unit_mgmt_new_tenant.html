@@ -9,20 +9,17 @@
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href="css/font-awesome.css" rel="stylesheet"> 
-<link href="css/jquery-ui.min.css" rel="stylesheet" />
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"> </script>
-<script src="js/jquery-ui.min.js"> </script>
-
+  
 <!-- Mainly scripts -->
 <script src="js/jquery.metisMenu.js"></script>
 <script src="js/jquery.slimscroll.min.js"></script>
 <!-- Custom and plugin javascript -->
 <link href="css/custom.css" rel="stylesheet">
 <script src="js/custom.js"></script>
+<script src="js/unit_mgmt.js"></script>
 <script src="js/screenfull.js"></script>
-<script src="js/user_add.js"></script>
-
 		<script>
 		$(function () {
 			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
@@ -119,7 +116,7 @@
 		    	<h2>
 				<a href="index.html">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Staff Management</span>
+				<a href="unit_mgmt_index.html"><span>Unit Management</span></a>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -131,20 +128,16 @@
                  <div class="but_list">
                    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                     <ul id="myTab" class="nav nav-tabs" role="tablist">
-                      <li role="presentation" ><a href="staff_mgmt_index.html" id="home-tab" role="tab">Home</a></li>
-                      <li role="presentation" class="active"><a href="#profile" role="tab" id="profile-tab" aria-expanded="true">New Employee</a></li>
-                      <li role="presentation"><a href="#profiles" role="tab" id="profile-tab">Employees</a></li>
+                      <li role="presentation"><a href="unit_mgmt_index.html" id="home-tab" role="tab">Home</a></li>
+                      <li role="presentation"><a href="unit_mgmt_new_property.html" role="tab" id="profile-tab">New Building</a></li>
+                      <li role="presentation" class="active"><a href="#" role="tab" id="profile-tab">New Tenant</a></li>
+                      <li role="presentation"><a href="#" role="tab" id="profile-tab">Properties</a></li>
                     </ul>
-                <form action="staff_mgmt_new_user1.html" method="post" name="profile_main">
+                <form action="unit_mgmt_property.html" method="post" name="prop_main">
                 <div id="myTabContent" class="tab-content">
                   <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
-                  	<h2 class="h2.-bootstrap-heading group-mail">Personal Details</h2>
-                    <!-- Personal Details -->
-                    <div class="row">
-						<div class="col-md-12 group-mail div_disable" style="color:#C03" id="errorfields">
-							Please fill all mandatory fields.
-						</div>
-					</div>
+                  	<h2 class="h2.-bootstrap-heading group-mail">New Tenant</h2>
+                    
                     <div class="row">
                         <div class="col-xs-6 col-md-4 group-mail">
                         <label for="first_name">First Name</label>
@@ -178,13 +171,13 @@
                     </div>
                     <div class="row">
                     	<div class="col-xs-6 col-md-4 group-mail">
-                        <label for="mstatus">Marital Status</label>
-                        	<div class="radio block"><label><input type="radio" name="mstatus" id="mstatus" value="Single" checked> Single</label></div>
+                        <label for="mstatus">Martial Status</label>
+                        	<div class="radio block"><label><input type="radio" name="mstatus" id="mstatus" value="Single"> Single</label></div>
                             <div class="radio block"><label><input type="radio" name="mstatus" id="mstatus" value="Married"> Married</label></div>
                         </div>
                         <div class="col-xs-6 col-md-4 group-mail">
                         	<label for="nationality">Nationality</label>
-							<select class="form-control1" id="nationality" name="nationality" required>
+							<select class="form-control1" id="nationality" name="nationality">
                                   <option value="">-- select one --</option>
                                   <option value="afghan">Afghan</option>
                                   <option value="albanian">Albanian</option>
@@ -210,172 +203,206 @@
 							</select>
                         </div>                        
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="bgroup">Blood Group</label>
-                        <input id="bgroup" name="bgroup" class="form-control" type="text" placeholder="O+ve">
+                        &nbsp;
                         </div>
                     </div>
                     
-                    <h3 class="h3.-bootstrap-heading group-mail">Permanent Address</h3>
                     <div class="row">
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="address1">Address Line 1</label>
-                        <input id="address1" name="address1" class="form-control" required type="text" placeholder="Address">
+                        <label for="company_name">Organization Name</label>
+                        <input id="company_name" name="company_name" class="form-control" required type="text" placeholder="Organization name">
                         </div>
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="address2">Address Line 2</label>
-                        <input id="address2" name="address2" class="form-control" type="text" placeholder="">
+                        <label for="workas">Designation</label>
+                        <input id="workas" name="workas" class="form-control" type="text" placeholder="Designation">
                         </div>
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="city">City</label>
-                        <input id="city" name="city" class="form-control" required type="text" placeholder="City">
+                        &nbsp;
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="state">State/Province</label>
-                        <input id="state" name="state" class="form-control" required type="text" placeholder="Address">
-                        </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="zipcode">Zipcode</label>
-                        <input id="zipcode" name="zipcode" class="form-control" type="text" placeholder="">
-                        </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="country">Country</label>
-                        <select  class="form-control1" name="country" required>
-                            <option value="">Country...</option>
-                            <option value="Afganistan">Afghanistan</option>
-                            <option value="Albania">Albania</option>
-                            <option value="Algeria">Algeria</option>
-                            <option value="American Samoa">American Samoa</option>
-                            <option value="Andorra">Andorra</option>
-                            <option value="Angola">Angola</option>
-                            <option value="Anguilla">Anguilla</option>
-                            <option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Armenia">Armenia</option>
-                            <option value="Aruba">Aruba</option>
-                            <option value="Australia">Australia</option>
-                            <option value="Austria">Austria</option>
-                            <option value="Azerbaijan">Azerbaijan</option>
-                            <option value="Bahamas">Bahamas</option>
-                            <option value="Bahrain">Bahrain</option>
-                            <option value="Bangladesh">Bangladesh</option>
-                            <option value="Barbados">Barbados</option>
-                            <option value="Belarus">Belarus</option>
-                            <option value="Belgium">Belgium</option>
-                            <option value="Belize">Belize</option>
-                            <option value="Benin">Benin</option>
-                            <option value="Bermuda">Bermuda</option>
-                            <option value="Bhutan">Bhutan</option>
-                            <option value="Bolivia">Bolivia</option>
-                            <option value="Bonaire">Bonaire</option>
+                        <label for="idproof_type">ID Proof Type</label>
+                        <select class="form-control1" id="idproof_type" name="idproof_type">
+                          <option value="Emirates ID">Emirates ID</option>
+                          <option value="Passport">Passport</option>
                          </select>
                         </div>
-                    </div>
-                    <h3 class="h3.-bootstrap-heading group-mail">Current Address</h3>
-                    <div class="row">
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="caddress1">Address Line 1</label>
-                        <input id="caddress1" name="caddress1" class="form-control" required type="text" placeholder="Address">
+                        <label for="idproof_no">ID Number</label>
+                        <input id="idproof_no" name="idproof_no" class="form-control" type="text" required placeholder="No ..">
                         </div>
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="caddress2">Address Line 2</label>
-                        <input id="caddress2" name="caddress2" class="form-control" type="text" placeholder="">
+                        <label for="idproof_edt">Valid Until Date</label>
+                        <div class="input-group">
+                        <input id="idproof_edt" name="idproof_edt" class="form-control" type="text" required placeholder="dd-mm-yyyy"><span class="input-group-addon"><a href="#"><img width="21" height="20" alt="DT" src="images/date.png"></a></span>
                         </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="ccity">City</label>
-                        <input id="ccity" name="ccity" class="form-control" required type="text" placeholder="City">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="cstate">State/Province</label>
-                        <input id="cstate" name="cstate" class="form-control" required type="text" placeholder="Address">
-                        </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="czipcode">Zipcode</label>
-                        <input id="czipcode" name="czipcode" class="form-control" required type="text" placeholder="">
-                        </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="ccountry">Country</label>
-                        <select class="form-control1" name="ccountry">
-                            <option value="">Country...</option>
-                            <option value="Afganistan">Afghanistan</option>
-                            <option value="Albania">Albania</option>
-                            <option value="Algeria">Algeria</option>
-                            <option value="American Samoa">American Samoa</option>
-                            <option value="Andorra">Andorra</option>
-                            <option value="Angola">Angola</option>
-                            <option value="Anguilla">Anguilla</option>
-                            <option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Armenia">Armenia</option>
-                            <option value="Aruba">Aruba</option>
-                            <option value="Australia">Australia</option>
-                            <option value="Austria">Austria</option>
-                            <option value="Azerbaijan">Azerbaijan</option>
-                            <option value="Bahamas">Bahamas</option>
-                            <option value="Bahrain">Bahrain</option>
-                            <option value="Bangladesh">Bangladesh</option>
-                            <option value="Barbados">Barbados</option>
-                            <option value="Belarus">Belarus</option>
-                            <option value="Belgium">Belgium</option>
-                            <option value="Belize">Belize</option>
-                            <option value="Benin">Benin</option>
-                            <option value="Bermuda">Bermuda</option>
-                            <option value="Bhutan">Bhutan</option>
-                            <option value="Bolivia">Bolivia</option>
-                            <option value="Bonaire">Bonaire</option>
-                         </select>
+                    	<div class="col-xs-6 col-md-4 group-mail">
+                        <label for="passport_doc">Upload ID Proof Document</label>
+                        <input type="file" id="passport_doc">
                         </div>
                     </div>
-                    <h2 class="h2.-bootstrap-heading group-mail">Organization Details</h2>
-                    <!-- Organization Details -->
+                    
                     <div class="row">
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="empid">Employee ID</label>
-                        <input id="empid" name="empid" class="form-control" required type="text" placeholder="Employee ID">
+                    	<div class="col-xs-6 col-md-4 group-mail">
+                        <label for="prop_type">Property Type</label>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Building"  /><label>Building/FLAT</label></div>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Villa" checked/><label>Villa</label></div>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Warehouse" /><label> Warehouse</label></div>
+                        <div class="radio block"><input id="prop_type" name="prop_type" type="radio" value="Shop" /><label> Shops</label></div>
                         </div>
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="designation">Designation</label>
-                        <input id="designation" name="designation" class="form-control" required type="text" placeholder="Designation">
                         </div>
                         <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="dept">Department</label>
-                        <select class="form-control1" id="dept" name="dept" required>
-                        	<option value="">--Select--</option>
-                            <option value="Human Resource">Human Resource</option>
-                            <option value="Finance">Finance</option>
-                            <option value="Maintenance">Maintenance</option>
-                            <option value="Office">Office Management</option>
-                        </select>
+                        </div>
+                    </div>
+                    
+                    <!-- villa details -->
+                    <div id="villa" class="div_enable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="villa_no">Villa No</label>
+                            <select class="form-control1" id="villa_no" name="villa_no">
+                              <option value="">-- select one --</option>
+                              <option value="Villa A101">Villa A101</option>
+                              <option value="Villa A102">Villa A102</option>
+                              <option value="Villa B101">Villa B101</option>
+                              <option value="Villa B111">Villa B111</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="villa_no">Villa Name</label>
+                            <input id="villa_no" name="villa_no" class="form-control" disabled type="text" placeholder="Automatic Populate">
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flat/Building details -->
+                    <div id="flat" class="div_disable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="flat_name">Building Name</label>
+                            <select class="form-control1" id="flat_name" name="flat_name">
+                              <option value="">-- select one --</option>
+                              <option value="building1">Building 1</option>
+                              <option value="building2">Building 2</option>
+                              <option value="building3">Building 3</option>
+                              <option value="building4">Building 4</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="flat_name">Flat No</label>
+                            <select class="form-control1" id="flat_no" name="flat_no">
+                            	<option value="">-- select one --</option>
+                                <option value="Flat 101 ">Flat 101 </option>
+                              <option value="Flat 102">Flat 102</option>
+                              <option value="building3">Flat 511</option>
+                              <option value="building4">Flat 345</option>
+                            </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Warehouse details -->
+                    <div id="warehouse" class="div_disable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="wh_no">Warehouse No</label>
+                            <select class="form-control1" id="wh_no" name="wh_no">
+                              <option value="">-- select one --</option>
+                              <option value="building1">Warehouse 1</option>
+                              <option value="building2">Warehouse 2</option>
+                              <option value="building3">Warehouse 3</option>
+                              <option value="building4">Warehouse 4</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="warehouse_name">Warehouse Name</label>
+                            <input id="warehouse_name" name="warehouse_name" class="form-control" type="text" disabled placeholder="Autofill">
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Shop details -->
+                    <div id="shop" class="div_disable">
+                    	<div class="row">
+                        	<div class="col-xs-6 col-md-4 group-mail">
+                            <label for="shopi_no">Shop No</label>
+                            <select class="form-control1" id="shopi_no" name="shopi_no">
+                              <option value="">-- select one --</option>
+                              <option value="building1">Shop 1</option>
+                              <option value="building2">Shop 2</option>
+                              <option value="building3">Shop 3</option>
+                              <option value="building4">Shop 4</option>
+                             </select>
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            <label for="shopi_name">Shop Name</label>
+                            <input id="shopi_name" name="shopi_name" class="form-control" type="text" disabled placeholder="Autofill">
+                            </div>
+                            <div class="col-xs-6 col-md-4 group-mail">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 group-mail">
+                        <label for="flat_rent">Rent Amount (AED)</label>
+                        <input id="flat_rent" name="flat_rent" class="form-control" type="text" placeholder="1xxx or 2xxxx">
+                        </div>
+                        <div class="col-md-4">
+                        <label>&nbsp; </label>
+                        <select class="form-control" id="flat_rent_type" name="flat_rent_type">
+                              <option value="Monthly">Monthly</option>
+                              <option value="Quaterly">Quaterly</option>
+                              <option value="Half Yearly">Half Yearly</option>
+                              <option value="Yearly">Yearly</option>
+                             </select>
+                        </div>
+                        <div class="col-md-4 group-mail">
+                       
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="reportsto">Reports To:</label>
-                        <select class="form-control1" id="reportsto" name="reportsto" required>
-                        	<option value="">--Select--</option>
-                            <option value="1">Manager 1</option>
-                            <option value="2">Manager 2</option>
-                            <option value="3">Manager 3</option>
-                        </select>
+                        <div class="col-md-4 group-mail">
+                        <label for="rent_start_date">Rent Start Date</label>
+                        <div class="input-group">
+                        	<input id="rent_start_date" name="rent_start_date" class="form-control" type="text" required placeholder="dd-mm-yyyy"><span class="input-group-addon"><a href="#"><img width="21" height="20" alt="DT" src="images/date.png"></a></span>
                         </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="workemail">Work Email ID</label>
-                        <input id="workemail" name="workemail" class="form-control" required type="email" placeholder="Email ID">
                         </div>
-                        <div class="col-xs-6 col-md-4 group-mail">
-                        <label for="personalemail">Personal Email ID</label>
-                        <input id="personalemail" name="personalemail" class="form-control" required type="email" placeholder="Email ID">
+                        <div class="col-md-4">
+                        <label for="rent_duration">Rent Duration</label>
+                        <input id="rent_duration" name="rent_duration" class="form-control" type="text" placeholder="1 month or 2 months">
+                        </div>
+                        <div class="col-md-4 group-mail">
+                        <label>Payment Mode</label>
+                        <select class="form-control" id="payment_mode" name="payment_mode">
+                              <option value="Cash">Cash</option>
+                              <option value="Cheque">Cheque</option>
+                              <option value="Online Transfer">Online Transfer</option>
+                             </select>
                         </div>
                     </div>
+                        
                     <!-- footer-->
                     <div class="panel-footer">
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-2">
-                                <button id="save1" class="btn-primary btn">Save</button>
-                                <button id="save1n" class="btn-default btn">Save & Next</button>
+                                <button class="btn-primary btn">Save</button>
                                 <button class="btn-inverse btn" type="reset">Reset</button>
                             </div>
                         </div>
@@ -402,10 +429,6 @@
 <!--scrolling js-->
 	<script src="js/jquery.nicescroll.js"></script>
 	<script src="js/scripts.js"></script>
-    <script>
-		$('#dob').datepicker({dateFormat: "dd-mm-yy", changeMonth: true,
-      changeYear: true});
-	</script>
 	<!--//scrolling js-->
 </body>
 </html>

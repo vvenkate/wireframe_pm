@@ -25,16 +25,11 @@
 
 			if (!screenfull.enabled) {
 				return false;
-			}
-
-			
+			}	
 
 			$('#toggle').click(function () {
 				screenfull.toggle($('#container')[0]);
-			});
-			
-
-			
+			});		
 		});
 		</script>
 
@@ -120,16 +115,83 @@
 		    	<h2>
 				<a href="index.html">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Dashboard</span>
+				<span>Staff Management</span>
 				</h2>
 		    </div>
 		<!--//banner-->
  	 <!--faq-->
  	<div class="blank">
-			<div class="blank-page">
-	        	<p>Quick View on Expenses & Other</p>
-	        </div>
-	       </div>
+		<div class="blank-page">
+			<div class="grid_3 grid_5">
+                 <!--h3 class="head-top">Tabs</h3-->
+                 <div class="but_list">
+                   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                      <li role="presentation" ><a href="staff_mgmt_index.html" id="home-tab" role="tab">Home</a></li>
+                      <li role="presentation" class="active"><a href="#profile" role="tab" id="profile-tab" aria-expanded="true">New Employee</a></li>
+                      <li role="presentation"><a href="#profiles" role="tab" id="profile-tab">Employees</a></li>
+                    </ul>
+                <form action="staff_mgmt_complete.html" method="post" name="profile_main">
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                  	<h2 class="h2.-bootstrap-heading group-mail">Employee Benefit Details</h2>
+                    <!-- Personal Details -->
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="salary">Salary</label>
+                        <input id="salary" name="salary" class="form-control" type="text" placeholder="5xxx0">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="bonus">Bonus</label>
+                        <input id="bonus" name="bonus" class="form-control" type="text" placeholder="55xx">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                       
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        	<label for="anleave">Annual Leave</label>
+							<input id="anleave" name="anleave" class="form-control" type="text" placeholder="xx">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                       		<label for="sileave">Sick Leave</label>
+							<input id="sileave" name="sileave" class="form-control" type="text" placeholder="xx">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                       
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        
+                        </div>
+                    </div>
+                    
+                    <!-- footer-->
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button class="btn-default btn">Submit & Complete</button>
+                                <button class="btn-inverse btn" type="reset">Reset</button>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                </form>
+           </div>
+           </div>
+          </div>
+	    </div>
+	</div>
 	
 	<!--//faq-->
 		<!---->

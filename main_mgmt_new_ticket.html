@@ -25,16 +25,11 @@
 
 			if (!screenfull.enabled) {
 				return false;
-			}
-
-			
+			}	
 
 			$('#toggle').click(function () {
 				screenfull.toggle($('#container')[0]);
-			});
-			
-
-			
+			});		
 		});
 		</script>
 
@@ -106,7 +101,7 @@
                     </li>
                    
                     <li>
-                        <a href="user_mgmt_index.html" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">User Management</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">User Management</span><span class="fa arrow"></span></a>
                     </li>
                 </ul>
             </div>
@@ -120,7 +115,7 @@
 		    	<h2>
 				<a href="index.html">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Maintenance Management</span>
+				<a href="maint_mgmt_index.html"><span>Maintenance Management</span></a>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -132,95 +127,111 @@
                  <div class="but_list">
                    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                     <ul id="myTab" class="nav nav-tabs" role="tablist">
-                      <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
-                      <li role="presentation"><a href="main_mgmt_new_ticket.html" role="tab" id="profile-tab">New Maintenance Ticket</a></li>
+                      <li role="presentation"><a href="maint_mgmt_index.html" id="home-tab" aria-controls="home" aria-expanded="true">Home</a></li>
+                      <li role="presentation" class="active"><a href="#" role="tab" id="profile-tab">New Maintenance Ticket</a></li>
                       <li role="presentation"><a href="#" role="tab" id="profile-tab">List of Maintenance Ticket</a></li>
                     </ul>
+                <form action="list_maint_ticket.html" method="post" name="profile_main">
                 <div id="myTabContent" class="tab-content">
                   <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
-                  	<h3 class="h3.-bootstrap-heading group-mail">High Priority Tickets</h2>
-                    <div class="row show-grid">
-                    	<div class="col-md-2">
-                        	Ticket No<br/>
-                            &nbsp;
-                        </div>
-                        <div class="col-md-3">
-                        	Summary<br/>
-                            &nbsp; 
-                        </div>
-                        <div class="col-md-1">
-                        	Priority<br/>
-                            &nbsp;
-                        </div>
-                        <div class="col-md-2">
-                        	Building-Villa/Flat/Warehouse
-                        </div>
-                        <div class="col-md-1">
-                        	Creation Date
-                        </div>
-                        <div class="col-md-2">
-                        	Assigned to<br/>
-                            &nbsp;
-                        </div>
-                        <div class="col-md-1">
-                        	Action<br/>
-                            &nbsp;
+                  	<h2 class="h2.-bootstrap-heading group-mail">New Ticket</h2>
+                    <!-- Personal Details -->
+                    
+                    <div class="row">
+                        <div class="col-md-12 group-mail">
+                        <label for="ticket_sum">Ticket Summary</label>
+                        <input id="ticket_sum" name="ticket_sum" class="form-control" required type="text" placeholder="Ticket Summary">
                         </div>
                     </div>
-                    <div class="row commonsize">
-                    	<div class="col-md-2">
-                        	BH1_F10_0045
-                        </div>
-                        <div class="col-md-3">
-                        	Building 1: Floor 10 have problem in electricity 
-                        </div>
-                        <div class="col-md-1">
-                        	High
-                        </div>
-                        <div class="col-md-2">
-                        	BXXX Building - Floor 10
-                        </div>
-                        <div class="col-md-1">
-                        	2nd Aug 2016
-                        </div>
-                        <div class="col-md-2">
-                        	XYZ
-                        </div>
-                        <div class="col-md-1">
-                        	<a href="#">View</a>
+                    <div class="row">
+                        <div class="col-xs-12 group-mail">
+                        <label for="contact_no">Ticket Description</label>
+                        <textarea id="ticket_desc" name="ticket_desc" class="form-control" required placeholder="Description">
+                        </textarea>
                         </div>
                     </div>
-                    <div class="row commonsize">
-                    	<div class="col-md-2">
-                        	BH1_F10_0047
+                    <div class="row">
+                    	<div class="col-xs-6 col-md-4 group-mail">
+                        	<label for="maint_prop_type">Property Type</label>
+                        	<div class="radio block"><input id="maint_prop_type" name="maint_prop_type" type="radio" value="Building"  /><label>Building/FLAT</label></div>
+                        	<div class="radio block"><input id="maint_prop_type" name="maint_prop_type" type="radio" value="Villa" checked/><label>Villa</label></div>
+                        	<div class="radio block"><input id="maint_prop_type" name="maint_prop_type" type="radio" value="Warehouse" /><label> Warehouse</label></div>
+                        	<div class="radio block"><input id="maint_prop_type" name="maint_prop_type" type="radio" value="Shop" /><label> Shops</label></div>
                         </div>
-                        <div class="col-md-3">
-                        	Building 2: Flat 235 having Water Problem
-                        </div>
-                        <div class="col-md-1">
-                        	High
-                        </div>
-                        <div class="col-md-2">
-                        	BXXX Building - Flat 235
-                        </div>
-                        <div class="col-md-1">
-                        	4th Aug 2016
-                        </div>
-                        <div class="col-md-2">
-                        	XABCD
-                        </div>
-                        <div class="col-md-1">
-                        	<a href="#">View</a>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        	<label for="maint_prop_unit_no">Unit Number</label>
+							<select class="form-control1" id="maint_prop_unit_no" name="maint_prop_unit_no">
+                                  <option value="">-- select one --</option>
+                                  <option value="villa1">Villa 1-02</option>
+                                  <option value="villa2">Villa 2-12</option>
+                                  <option value="villa2">Villa 4-11</option>
+                                  <option value="villa2">Villa 5-12</option>
+							</select>
+                        </div>                        
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="maint_prop_tenant_name">Tenant Name</label>
+                        <select class="form-control1" id="maint_prop_tenant_name" name="maint_prop_tenant_name">
+                                  <option value="">-- select one --</option>
+                                  <option value="tenant1">Tenant 1</option>
+                                  <option value="tenant2">Tenant 2</option>
+                                  <option value="tenant3">Tenant 3</option>
+                                  <option value="tenant4">Tenant 4</option>
+							</select>
                         </div>
                     </div>
-                  </div>
-                  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-                   
-                  </div>
-                  <div role="tabpanel" class="tab-pane fade" id="profiles" aria-labelledby="profile-tab">
-                   
+                    
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="issue_type">Issue Type</label>
+							<select class="form-control1" id="issue_type" name="issue_type">
+                                  <option value="">-- select one --</option>
+                                  <option value="plumbing">Plumbing</option>
+                                  <option value="electrical">Electrical</option>
+                                  <option value="commonarea">Common Area Issue</option>
+                                  <option value="construction">Construction</option>
+                                  <option value="furniture">Furniture</option>
+							</select>
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        <label for="maint_prior">Priority</label>
+							<select class="form-control1" id="maint_prior" name="maint_prior">
+                                  <option value="Critical">Critical</option>
+                                  <option value="High">High</option>
+                                  <option value="Normal" selected>Normal</option>
+                                  <option value="Medium">Medium</option>
+                                  <option value="Low">Low</option>
+							</select>
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4 group-mail">
+                         <label for="maint_image">Upload Image</label>
+                         <input type="file" id="maint_image">
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                        
+                        </div>
+                        <div class="col-xs-6 col-md-4 group-mail">
+                       
+                        </div>
+                    </div>
+                    
+                    <!-- footer-->
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button class="btn-primary btn">Save</button>
+                                <button class="btn-inverse btn" type="reset">Reset</button>
+                            </div>
+                        </div>
+                     </div>
                   </div>
                 </div>
+                </form>
            </div>
            </div>
           </div>

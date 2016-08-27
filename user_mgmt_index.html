@@ -27,18 +27,12 @@
 				return false;
 			}
 
-			
-
 			$('#toggle').click(function () {
 				screenfull.toggle($('#container')[0]);
 			});
 			
-
-			
 		});
 		</script>
-
-
 
 </head>
 <body>
@@ -120,16 +114,80 @@
 		    	<h2>
 				<a href="index.html">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Dashboard</span>
+				<span>User Management</span>
 				</h2>
 		    </div>
 		<!--//banner-->
  	 <!--faq-->
  	<div class="blank">
-			<div class="blank-page">
-	        	<p>Quick View on Expenses & Other</p>
-	        </div>
-	       </div>
+		<div class="blank-page">
+			<div class="grid_3 grid_5">
+                 <!--h3 class="head-top">Tabs</h3-->
+                 <div class="but_list">
+                   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#profiles" role="tab" id="profile-tab">User List</a></li>
+                      <li role="presentation"><a href="user_mgmt_new_role.html" role="tab" id="profile-tab">New User/Role</a></li>
+                    </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                  	<h3 class="h3.-bootstrap-heading">New Employees</h3>
+                    <div class="row show-grid">
+                    	<div class="col-md-1">
+                        	S.No
+                        </div>
+                        <div class="col-md-2">
+                        	First Name
+                        </div>
+                        <div class="col-md-2">
+                        	Last Name
+                        </div>
+                        <div class="col-md-2">
+                        	Role
+                        </div>
+                        <div class="col-md-2">
+                        	Department
+                        </div>
+                        <div class="col-md-2">
+                        	Last Modified
+                        </div>
+                        <div class="col-md-1">
+                        	Action
+                        </div>
+                    </div>
+                    <div class="row commonsize">
+                    	<div class="col-md-1">
+                        	1
+                        </div>
+                        <div class="col-md-2">
+                        	XF
+                        </div>
+                        <div class="col-md-2">
+                        	XY
+                        </div>
+                        <div class="col-md-2">
+                        	Maintenance
+                        </div>
+                        <div class="col-md-2">
+                        	Maintenance Team
+                        </div>
+                        <div class="col-md-2">
+                        	22nd August 2016
+                        </div>
+                        <div class="col-md-1">
+                        	<a href="user_mgmt_new_role.html">Edit</a>
+                        </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profiles" aria-labelledby="profile-tab">
+                    
+                  </div>
+                </div>
+           </div>
+           </div>
+          </div>
+	    </div>
+	</div>
 	
 	<!--//faq-->
 		<!---->

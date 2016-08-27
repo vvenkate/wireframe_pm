@@ -2840,3 +2840,16 @@ ul.dropdown-menu.dropdown-menu-right {
     font-size: 1.6em;
 }
 }
+.h3, h3{
+	font-size: 22px !important;
+}
+.h2.-bootstrap-heading, h2{
+	font-size: 25px;
+}
+
+.commonsize{
+	font-size: 13px;
+}
+.textborderred{
+	border: 1px solid #F00 !important;
+}
