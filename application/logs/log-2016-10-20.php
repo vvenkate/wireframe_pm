@@ -1,0 +1,8 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2016-10-20 02:31:03 --> COMES IN
+ERROR - 2016-10-20 02:31:03 --> COMMENTSripul
+ERROR - 2016-10-20 02:31:03 --> TOTAL FILES ARE:- 0
+ERROR - 2016-10-20 22:22:04 --> COMES IN
+ERROR - 2016-10-20 22:22:04 --> COMMENTSfhcjvj
+ERROR - 2016-10-20 22:22:04 --> TOTAL FILES ARE:- 0
